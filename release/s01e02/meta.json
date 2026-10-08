@@ -1,0 +1,49 @@
+{
+  "id": "s01e02",
+  "number": 2,
+  "title": "Dead astern | Perihelion S1 E2",
+  "logline": "Two days out from the first beacon, the captain opens an inquiry into the transmission nobody admits to sending. The signal that answered it has not fallen behind.",
+  "runtimeSeconds": 442.79,
+  "publishAt": "2026-10-22T18:00:00+02:00",
+  "chapters": [
+    {
+      "at": "0:00",
+      "title": "Inquiry"
+    },
+    {
+      "at": "1:33",
+      "title": "Crate 41"
+    },
+    {
+      "at": "3:22",
+      "title": "Bearing 180"
+    },
+    {
+      "at": "5:45",
+      "title": "The watch"
+    }
+  ],
+  "tags": [
+    "science fiction",
+    "sci-fi series",
+    "space exploration",
+    "animated series",
+    "retro console",
+    "captain's log",
+    "first contact",
+    "mystery",
+    "serial fiction",
+    "Perihelion"
+  ],
+  "files": {
+    "video": "dist/s01e02/s01e02.mp4",
+    "thumbnail": "release/s01e02/thumbnail.png",
+    "description": "release/s01e02/description.txt"
+  },
+  "trailer": {
+    "title": "Someone on this ship answered it | Perihelion E2 #shorts",
+    "runtimeSeconds": 43.2,
+    "publishAt": "2026-10-21T18:00:00+02:00",
+    "video": "dist/s01e02/s01e02-short.mp4"
+  }
+}

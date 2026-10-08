@@ -1,0 +1,53 @@
+{
+  "id": "s01e01",
+  "number": 1,
+  "title": "Sixty-one seconds | Perihelion S1 E1",
+  "logline": "A survey ship reaches the first beacon left by a lost expedition. It pulses every 61 seconds instead of 60, and its memory explains why.",
+  "runtimeSeconds": 269.59,
+  "publishAt": "2026-10-20T18:00:00+02:00",
+  "chapters": [
+    {
+      "at": "0:00",
+      "title": "Transit"
+    },
+    {
+      "at": "0:44",
+      "title": "Arrival"
+    },
+    {
+      "at": "1:30",
+      "title": "The beacon"
+    },
+    {
+      "at": "2:41",
+      "title": "Ship night"
+    },
+    {
+      "at": "3:27",
+      "title": "Morning"
+    }
+  ],
+  "tags": [
+    "science fiction",
+    "sci-fi series",
+    "space exploration",
+    "animated series",
+    "retro console",
+    "captain's log",
+    "first contact",
+    "mystery",
+    "serial fiction",
+    "Perihelion"
+  ],
+  "files": {
+    "video": "dist/s01e01/s01e01.mp4",
+    "thumbnail": "release/s01e01/thumbnail.png",
+    "description": "release/s01e01/description.txt"
+  },
+  "trailer": {
+    "title": "The beacon should pulse every 60 seconds | Perihelion E1 #shorts",
+    "runtimeSeconds": 38.7,
+    "publishAt": "2026-10-19T18:00:00+02:00",
+    "video": "dist/s01e01/s01e01-short.mp4"
+  }
+}

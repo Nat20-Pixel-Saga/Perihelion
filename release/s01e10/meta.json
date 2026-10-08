@@ -1,0 +1,49 @@
+{
+  "id": "s01e10",
+  "number": 10,
+  "title": "All aboard and well | Perihelion S1 E10",
+  "logline": "A copy of the captain holds the ship and will send sixty-three voices home in thirty-eight minutes. Two of the crew go at the relay with a wrench. She goes at the copy with the log.",
+  "runtimeSeconds": 506.97,
+  "publishAt": "2026-11-10T18:00:00+01:00",
+  "chapters": [
+    {
+      "at": "0:00",
+      "title": "Thirty-eight minutes"
+    },
+    {
+      "at": "1:34",
+      "title": "Two captains"
+    },
+    {
+      "at": "3:44",
+      "title": "The cut"
+    },
+    {
+      "at": "6:01",
+      "title": "All seven"
+    }
+  ],
+  "tags": [
+    "science fiction",
+    "sci-fi series",
+    "space exploration",
+    "animated series",
+    "retro console",
+    "captain's log",
+    "first contact",
+    "mystery",
+    "serial fiction",
+    "Perihelion"
+  ],
+  "files": {
+    "video": "dist/s01e10/s01e10.mp4",
+    "thumbnail": "release/s01e10/thumbnail.png",
+    "description": "release/s01e10/description.txt"
+  },
+  "trailer": {
+    "title": "To stop it, she must out-argue herself | Perihelion E10 #shorts",
+    "runtimeSeconds": 43.7,
+    "publishAt": "2026-11-09T18:00:00+01:00",
+    "video": "dist/s01e10/s01e10-short.mp4"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "s01e06",
+  "number": 6,
+  "title": "The seventh | Perihelion S1 E6",
+  "logline": "The first officer calls a vote of confidence in the captain. Before anyone walks, she has to account for one night, and for eight tenths of a second.",
+  "runtimeSeconds": 444.23,
+  "publishAt": "2026-10-31T18:00:00+01:00",
+  "chapters": [
+    {
+      "at": "0:00",
+      "title": "Article nine"
+    },
+    {
+      "at": "2:23",
+      "title": "Madrigal's list"
+    },
+    {
+      "at": "3:35",
+      "title": "The vote"
+    },
+    {
+      "at": "5:58",
+      "title": "Open log"
+    }
+  ],
+  "tags": [
+    "science fiction",
+    "sci-fi series",
+    "space exploration",
+    "animated series",
+    "retro console",
+    "captain's log",
+    "first contact",
+    "mystery",
+    "serial fiction",
+    "Perihelion"
+  ],
+  "files": {
+    "video": "dist/s01e06/s01e06.mp4",
+    "thumbnail": "release/s01e06/thumbnail.png",
+    "description": "release/s01e06/description.txt"
+  },
+  "trailer": {
+    "title": "The crew will vote on their captain | Perihelion E6 #shorts",
+    "runtimeSeconds": 43.2,
+    "publishAt": "2026-10-30T18:00:00+01:00",
+    "video": "dist/s01e06/s01e06-short.mp4"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "note": "Every track here is CC0 (public domain dedication) on OpenGameArt.org, checked on 2026-10-08. Run `npm run music` to download them into music/tracks/. A mood with a track on disk plays that track; a mood without one uses the procedural pad.",
+  "moods": {
+    "calm": "out-there",
+    "wonder": "sector",
+    "unease": "airy",
+    "dread": "menacing-otherworld",
+    "crisis": "urgent",
+    "night": "pulse",
+    "resolve": "cosmic-navigation"
+  },
+  "tracks": [
+    { "id": "out-there", "title": "Space Music: Out There", "author": "yd", "license": "CC0 1.0", "page": "https://opengameart.org/content/space-music-out-there", "url": "https://opengameart.org/sites/default/files/OutThere_0.ogg", "file": "out-there.ogg", "gain": 0.5 },
+    { "id": "sector", "title": "Sector (Dark Sci-Fi Audio Pack)", "author": "SRG774", "license": "CC0 1.0", "page": "https://opengameart.org/content/dark-sci-fi-audio-pack", "url": "https://opengameart.org/sites/default/files/sector_0.mp3", "file": "sector.mp3", "gain": 0.5 },
+    { "id": "airy", "title": "Airy (Dark Sci-Fi Audio Pack)", "author": "SRG774", "license": "CC0 1.0", "page": "https://opengameart.org/content/dark-sci-fi-audio-pack", "url": "https://opengameart.org/sites/default/files/airy_0.mp3", "file": "airy.mp3", "gain": 0.5 },
+    { "id": "pulse", "title": "Pulse (Dark Sci-Fi Audio Pack)", "author": "SRG774", "license": "CC0 1.0", "page": "https://opengameart.org/content/dark-sci-fi-audio-pack", "url": "https://opengameart.org/sites/default/files/pulse_0.mp3", "file": "pulse.mp3", "gain": 0.4 },
+    { "id": "urgent", "title": "Urgent (Dark Sci-Fi Audio Pack)", "author": "SRG774", "license": "CC0 1.0", "page": "https://opengameart.org/content/dark-sci-fi-audio-pack", "url": "https://opengameart.org/sites/default/files/urgent_0.mp3", "file": "urgent.mp3", "gain": 0.45 },
+    { "id": "menacing-otherworld", "title": "Menacing Otherworld", "author": "Ruskerdax", "license": "CC0 1.0", "page": "https://opengameart.org/content/menacing-otherworld", "url": "https://opengameart.org/sites/default/files/ruskerdax_-_menacing_otherworld.mp3", "file": "menacing-otherworld.mp3", "gain": 0.45 },
+    { "id": "cosmic-navigation", "title": "Cosmic Navigation", "author": "Synth-thetic", "license": "CC0 1.0", "page": "https://opengameart.org/content/cosmic-navigation", "url": "https://opengameart.org/sites/default/files/cosmic_navigation_loop.flac", "file": "cosmic-navigation.flac", "gain": 0.45 }
+  ],
+  "alternates": [
+    { "title": "Transmission (Dark Sci-Fi Audio Pack)", "author": "SRG774", "license": "CC0 1.0", "page": "https://opengameart.org/content/dark-sci-fi-audio-pack", "use": "end cards" },
+    { "title": "Ambience Pack 1: Sci-Fi Horror (five one-minute loops, including 'Final Captain's Log')", "author": "Joth", "license": "CC0 1.0", "page": "https://opengameart.org/content/ambience-pack-1-sci-fi-horror", "use": "dread, night" },
+    { "title": "Outer Space Loop", "author": "wipics", "license": "CC0 1.0", "page": "https://opengameart.org/content/outer-space-loop", "use": "calm" }
+  ]
+}

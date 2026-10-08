@@ -1,0 +1,17 @@
+{
+  "series": "Perihelion",
+  "season": 1,
+  "channel": "Nat20 Pixel Saga",
+  "repo": "https://github.com/Nat20-Pixel-Saga/Perihelion",
+  "playlistUrl": "",
+  "schedule": {
+    "firstEpisode": "2026-10-20",
+    "days": ["Tue", "Thu", "Sat"],
+    "time": "18:00",
+    "timezone": "Europe/Paris",
+    "trailerDaysBefore": 1
+  },
+  "about": "PERIHELION is a science-fiction serial told entirely through a ship's console: the viewscreen, the star map, the signal strip, the deck plan, the captain's log and the comms. Watch the instruments. They show more than the log says.",
+  "hashtags": ["#scifi", "#sciencefiction", "#spaceexploration", "#animatedseries", "#perihelion"],
+  "tags": ["science fiction", "sci-fi series", "space exploration", "animated series", "retro console", "captain's log", "first contact", "mystery", "serial fiction", "Perihelion"]
+}

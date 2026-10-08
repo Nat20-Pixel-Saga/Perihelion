@@ -1,0 +1,49 @@
+{
+  "id": "s01e04",
+  "number": 4,
+  "title": "Blind skim | Perihelion S1 E4",
+  "logline": "The third beacon orbits a gas giant that could fill the tanks. Reading its depth means transmitting, and this ship does not transmit. The engineer offers another way.",
+  "runtimeSeconds": 420.62,
+  "publishAt": "2026-10-27T18:00:00+01:00",
+  "chapters": [
+    {
+      "at": "0:00",
+      "title": "Kiln"
+    },
+    {
+      "at": "1:55",
+      "title": "The price"
+    },
+    {
+      "at": "3:44",
+      "title": "Blind skim"
+    },
+    {
+      "at": "5:26",
+      "title": "Empty drive room"
+    }
+  ],
+  "tags": [
+    "science fiction",
+    "sci-fi series",
+    "space exploration",
+    "animated series",
+    "retro console",
+    "captain's log",
+    "first contact",
+    "mystery",
+    "serial fiction",
+    "Perihelion"
+  ],
+  "files": {
+    "video": "dist/s01e04/s01e04.mp4",
+    "thumbnail": "release/s01e04/thumbnail.png",
+    "description": "release/s01e04/description.txt"
+  },
+  "trailer": {
+    "title": "To refuel, they must fly blind | Perihelion E4 #shorts",
+    "runtimeSeconds": 44.2,
+    "publishAt": "2026-10-26T18:00:00+01:00",
+    "video": "dist/s01e04/s01e04-short.mp4"
+  }
+}

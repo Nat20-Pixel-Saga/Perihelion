@@ -1,0 +1,37 @@
+name: Render episodes
+
+# Run by hand from the Actions tab. Renders the chosen episodes (or all of them),
+# then attaches the videos, trailers, thumbnails and descriptions to the run.
+on:
+  workflow_dispatch:
+    inputs:
+      episodes:
+        description: 'Episode ids separated by spaces (empty = all), e.g. "s01e01 s01e02"'
+        required: false
+        default: ''
+      music:
+        description: 'Download and use the CC0 tracks in music/manifest.json'
+        type: boolean
+        default: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: npm install
+      - if: ${{ inputs.music }}
+        run: npm run music
+      - run: node tools/cli.js build ${{ inputs.episodes }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: perihelion-render
+          path: |
+            dist/**/*.mp4
+            release/**
+          retention-days: 30

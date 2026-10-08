@@ -1,0 +1,49 @@
+{
+  "id": "s01e03",
+  "number": 3,
+  "title": "Three empty suits | Perihelion S1 E3",
+  "logline": "The second beacon counts fifty-eight. Its memory says three people took a shuttle toward the signal, and the shuttle is still here, adrift in the wreck of a dead star.",
+  "runtimeSeconds": 446.26,
+  "publishAt": "2026-10-24T18:00:00+02:00",
+  "chapters": [
+    {
+      "at": "0:00",
+      "title": "The Shallows"
+    },
+    {
+      "at": "1:19",
+      "title": "Beacon 2"
+    },
+    {
+      "at": "2:41",
+      "title": "Boarding"
+    },
+    {
+      "at": "5:24",
+      "title": "Two trays"
+    }
+  ],
+  "tags": [
+    "science fiction",
+    "sci-fi series",
+    "space exploration",
+    "animated series",
+    "retro console",
+    "captain's log",
+    "first contact",
+    "mystery",
+    "serial fiction",
+    "Perihelion"
+  ],
+  "files": {
+    "video": "dist/s01e03/s01e03.mp4",
+    "thumbnail": "release/s01e03/thumbnail.png",
+    "description": "release/s01e03/description.txt"
+  },
+  "trailer": {
+    "title": "Three people left this shuttle. None were taken | Perihelion E3 #shorts",
+    "runtimeSeconds": 45.2,
+    "publishAt": "2026-10-23T18:00:00+02:00",
+    "video": "dist/s01e03/s01e03-short.mp4"
+  }
+}

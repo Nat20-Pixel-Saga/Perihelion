@@ -1,0 +1,49 @@
+{
+  "id": "s01e08",
+  "number": 8,
+  "title": "Aphelion | Perihelion S1 E8",
+  "logline": "The Perihelion comes alongside the lost ship. Her lights are on, her beacon counts one, and somebody answers a signal lamp. The captain goes across herself.",
+  "runtimeSeconds": 447.16,
+  "publishAt": "2026-11-05T18:00:00+01:00",
+  "chapters": [
+    {
+      "at": "0:00",
+      "title": "Alongside"
+    },
+    {
+      "at": "1:34",
+      "title": "Sixty-three doors"
+    },
+    {
+      "at": "3:22",
+      "title": "Brandt"
+    },
+    {
+      "at": "5:19",
+      "title": "Nine"
+    }
+  ],
+  "tags": [
+    "science fiction",
+    "sci-fi series",
+    "space exploration",
+    "animated series",
+    "retro console",
+    "captain's log",
+    "first contact",
+    "mystery",
+    "serial fiction",
+    "Perihelion"
+  ],
+  "files": {
+    "video": "dist/s01e08/s01e08.mp4",
+    "thumbnail": "release/s01e08/thumbnail.png",
+    "description": "release/s01e08/description.txt"
+  },
+  "trailer": {
+    "title": "Sixty-three empty cabins. One light still on | Perihelion E8 #shorts",
+    "runtimeSeconds": 47.2,
+    "publishAt": "2026-11-04T18:00:00+01:00",
+    "video": "dist/s01e08/s01e08-short.mp4"
+  }
+}

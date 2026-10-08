@@ -1,0 +1,49 @@
+{
+  "id": "s01e09",
+  "number": 9,
+  "title": "The Register | Perihelion S1 E9",
+  "logline": "The Perihelion reaches the source of the signal. It is not a ship and it is not a star. Sixty-three voices are waiting there, and one of them knows the captain by her first name.",
+  "runtimeSeconds": 446.99,
+  "publishAt": "2026-11-07T18:00:00+01:00",
+  "chapters": [
+    {
+      "at": "0:00",
+      "title": "Sixty-three"
+    },
+    {
+      "at": "1:31",
+      "title": "The kept"
+    },
+    {
+      "at": "4:06",
+      "title": "The door"
+    },
+    {
+      "at": "5:59",
+      "title": "I have the conn"
+    }
+  ],
+  "tags": [
+    "science fiction",
+    "sci-fi series",
+    "space exploration",
+    "animated series",
+    "retro console",
+    "captain's log",
+    "first contact",
+    "mystery",
+    "serial fiction",
+    "Perihelion"
+  ],
+  "files": {
+    "video": "dist/s01e09/s01e09.mp4",
+    "thumbnail": "release/s01e09/thumbnail.png",
+    "description": "release/s01e09/description.txt"
+  },
+  "trailer": {
+    "title": "Sixty-three voices. One of them is her brother | Perihelion E9 #shorts",
+    "runtimeSeconds": 46.7,
+    "publishAt": "2026-11-06T18:00:00+01:00",
+    "video": "dist/s01e09/s01e09-short.mp4"
+  }
+}

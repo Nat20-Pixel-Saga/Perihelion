@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perihelion preview</title>
+<style>
+  @font-face { font-family: "IBM Plex Mono"; src: url(/assets/fonts/IBMPlexMono-Regular.ttf); font-weight: 400; }
+  @font-face { font-family: "IBM Plex Mono"; src: url(/assets/fonts/IBMPlexMono-Bold.ttf); font-weight: 700; }
+  @font-face { font-family: "Tektur"; src: url(/assets/fonts/Tektur-Medium.ttf); }
+  :root { color-scheme: dark; --void: #070B10; --amber: #F2A93B; --dim: #A87428; --paper: #FCE9C8; }
+  body { margin: 0; padding: 16px; background: var(--void); color: var(--paper); font: 14px "IBM Plex Mono", monospace; }
+  main { max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  canvas { width: 100%; aspect-ratio: 16 / 9; border: 1px solid #3A2A12; display: block; }
+  .bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .bar input[type=range] { flex: 1 1 240px; min-width: 0; accent-color: var(--amber); }
+  button, select { font: inherit; color: var(--amber); background: transparent; border: 1px solid var(--dim); padding: 6px 10px; }
+  #caption { min-height: 2.6em; color: var(--paper); }
+  #caption b { color: var(--amber); font-weight: 400; margin-right: 10px; }
+</style>
+<main>
+  <div class="bar"><select id="ep" aria-label="Episode"></select><button id="play">Play</button><input id="scrub" type="range" min="0" max="1" step="0.1" value="0" aria-label="Position"><span id="time"></span><button id="speed">1x</button></div>
+  <canvas id="c" width="1920" height="1080"></canvas>
+  <div id="caption"></div>
+  <div class="bar" id="scenes"></div>
+</main>
+<script type="module">
+import { drawWide } from '/engine/draw.js';
+import { prepare } from '/engine/state.js';
+const $ = id => document.getElementById(id), ctx = $('c').getContext('2d');
+const fmt = x => Math.floor(x / 60) + ':' + String(Math.floor(x % 60)).padStart(2, '0');
+let ep = null, t = 0, playing = false, speed = 1, last = 0, dirty = true;
+const ids = await (await fetch('/episodes.json')).json();
+ids.forEach(id => $('ep').append(new Option(id, id)));
+async function load(id) {
+  ep = prepare((await import('/episodes/' + id + '.js?' + Date.now())).default); t = 0; dirty = true;
+  $('scrub').max = ep.duration; $('scenes').textContent = '';
+  ep.scenes.forEach((s, i) => { const b = document.createElement('button'); b.textContent = (i + 1) + ' ' + s.title; b.onclick = () => { t = s.t; dirty = true; }; $('scenes').append(b); });
+}
+$('ep').onchange = () => load($('ep').value);
+$('play').onclick = () => { playing = !playing; $('play').textContent = playing ? 'Pause' : 'Play'; };
+$('speed').onclick = () => { speed = speed === 1 ? 2 : speed === 2 ? 4 : 1; $('speed').textContent = speed + 'x'; };
+$('scrub').oninput = () => { t = +$('scrub').value; dirty = true; };
+function frame(now) {
+  const dt = Math.min(0.1, (now - last) / 1000); last = now;
+  if (ep && (playing || dirty)) {
+    if (playing) t = Math.min(ep.duration, t + dt * speed);
+    ctx.setTransform(1.5, 0, 0, 1.5, 0, 0); const s = drawWide(ctx, ep, t); dirty = false;
+    $('scrub').value = t; $('time').textContent = fmt(t) + ' / ' + fmt(ep.duration);
+    $('caption').innerHTML = ''; if (s.caption) { const b = document.createElement('b'); b.textContent = s.caption.who; $('caption').append(b, s.caption.text); }
+  }
+  requestAnimationFrame(frame);
+}
+await document.fonts.load('18px "IBM Plex Mono"'); await document.fonts.load('40px "Tektur"');
+await load(new URLSearchParams(location.search).get('ep') || ids[0]); $('ep').value = ep.meta.id;
+requestAnimationFrame(frame);
+</script>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "perihelion",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Render pipeline for Perihelion, a science-fiction serial told through a ship's console.",
+  "scripts": {
+    "build": "node tools/cli.js build",
+    "lint": "node tools/cli.js lint",
+    "meta": "node tools/cli.js meta",
+    "preview": "node tools/preview.js",
+    "music": "node tools/cli.js music fetch"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.100"
+  },
+  "engines": { "node": ">=20" }
+}

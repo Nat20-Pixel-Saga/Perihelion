@@ -1,0 +1,49 @@
+{
+  "id": "s01e07",
+  "number": 7,
+  "title": "What we deleted | Perihelion S1 E7",
+  "logline": "At the red dwarf Vesper the fourth beacon counts nineteen, and warns that the thing ahead has learned to write. That night it writes to the doctor, and then to the signals officer.",
+  "runtimeSeconds": 441.61,
+  "publishAt": "2026-11-03T18:00:00+01:00",
+  "chapters": [
+    {
+      "at": "0:00",
+      "title": "Vesper"
+    },
+    {
+      "at": "1:55",
+      "title": "Letters"
+    },
+    {
+      "at": "3:58",
+      "title": "One word"
+    },
+    {
+      "at": "5:51",
+      "title": "One second"
+    }
+  ],
+  "tags": [
+    "science fiction",
+    "sci-fi series",
+    "space exploration",
+    "animated series",
+    "retro console",
+    "captain's log",
+    "first contact",
+    "mystery",
+    "serial fiction",
+    "Perihelion"
+  ],
+  "files": {
+    "video": "dist/s01e07/s01e07.mp4",
+    "thumbnail": "release/s01e07/thumbnail.png",
+    "description": "release/s01e07/description.txt"
+  },
+  "trailer": {
+    "title": "It writes to them now, in voices they miss | Perihelion E7 #shorts",
+    "runtimeSeconds": 42.7,
+    "publishAt": "2026-11-02T18:00:00+01:00",
+    "video": "dist/s01e07/s01e07-short.mp4"
+  }
+}

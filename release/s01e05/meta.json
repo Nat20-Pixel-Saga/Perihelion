@@ -1,0 +1,49 @@
+{
+  "id": "s01e05",
+  "number": 5,
+  "title": "Eight | Perihelion S1 E5",
+  "logline": "Three days out of Kiln, the pulse from the cargo relay slows from seven seconds to eight. There are seven people aboard. The crew search the ship for the eighth and look in the wrong place.",
+  "runtimeSeconds": 441.18,
+  "publishAt": "2026-10-29T18:00:00+01:00",
+  "chapters": [
+    {
+      "at": "0:00",
+      "title": "The count"
+    },
+    {
+      "at": "2:53",
+      "title": "Written by no one"
+    },
+    {
+      "at": "4:10",
+      "title": "Every console"
+    },
+    {
+      "at": "6:08",
+      "title": "I was not asleep"
+    }
+  ],
+  "tags": [
+    "science fiction",
+    "sci-fi series",
+    "space exploration",
+    "animated series",
+    "retro console",
+    "captain's log",
+    "first contact",
+    "mystery",
+    "serial fiction",
+    "Perihelion"
+  ],
+  "files": {
+    "video": "dist/s01e05/s01e05.mp4",
+    "thumbnail": "release/s01e05/thumbnail.png",
+    "description": "release/s01e05/description.txt"
+  },
+  "trailer": {
+    "title": "Seven people aboard. The signal counts eight | Perihelion E5 #shorts",
+    "runtimeSeconds": 42.2,
+    "publishAt": "2026-10-28T18:00:00+01:00",
+    "video": "dist/s01e05/s01e05-short.mp4"
+  }
+}
