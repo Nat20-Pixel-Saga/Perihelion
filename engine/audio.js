@@ -12,7 +12,7 @@ const TAU = Math.PI * 2;
 function noiseGen(seed) { let s = seed >>> 0; return () => { s = (Math.imul(s, 1664525) + 1013904223) >>> 0; return s / 2147483648 - 1; }; }
 
 export function renderAudio(ep, opts) {
-  opts = Object.assign({ pad: true }, opts || {});
+  opts = Object.assign({ pad: true, hum: true }, opts || {});
   prepare(ep);
   const dur = ep.duration, n = Math.ceil(dur * SR);
   const L = new Float32Array(n), R = new Float32Array(n);
@@ -34,7 +34,7 @@ export function renderAudio(ep, opts) {
   };
 
   // Engine hum.
-  for (let i = 0; i < n; i++) {
+  if (opts.hum) for (let i = 0; i < n; i++) {
     const t = i / SR, a = 0.03 * (1 + 0.15 * Math.sin(TAU * 0.07 * t));
     const v = Math.sin(TAU * 55 * t) * 0.5 + Math.sin(TAU * 82.4 * t) * 0.2 + Math.sin(TAU * 110.6 * t) * 0.1;
     L[i] += v * a; R[i] += (Math.sin(TAU * 55 * t + 0.4) * 0.5 + Math.sin(TAU * 82.4 * t + 0.9) * 0.2 + Math.sin(TAU * 110.6 * t) * 0.1) * a;

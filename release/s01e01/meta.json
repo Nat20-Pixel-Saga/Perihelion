@@ -45,9 +45,16 @@
     "description": "release/s01e01/description.txt"
   },
   "trailer": {
-    "title": "The beacon should pulse every 60 seconds | Perihelion E1 #shorts",
     "runtimeSeconds": 38.7,
     "publishAt": "2026-10-19T18:00:00+02:00",
-    "video": "dist/s01e01/s01e01-short.mp4"
+    "wide": {
+      "title": "Trailer: Sixty-one seconds | Perihelion S1 E1",
+      "video": "dist/s01e01/s01e01-trailer.mp4",
+      "thumbnail": "release/s01e01/thumbnail.png"
+    },
+    "short": {
+      "title": "The beacon should pulse every 60 seconds | Perihelion E1 #shorts",
+      "video": "dist/s01e01/s01e01-short.mp4"
+    }
   }
 }

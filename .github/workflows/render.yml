@@ -28,6 +28,7 @@ jobs:
       - if: ${{ inputs.music }}
         run: npm run music
       - run: node tools/cli.js build ${{ inputs.episodes }}
+      - run: node tools/cli.js season-trailer
       - uses: actions/upload-artifact@v4
         with:
           name: perihelion-render

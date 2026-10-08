@@ -71,18 +71,18 @@ export async function renderChannel(all) {
     await save(c, 'banner-safe-area-check.png'); }
 
   // Playlist cover, 1280 x 720.
-  { const { c, ctx } = canvas(1280, 720);
+  for (const cover of [{ label: all.length + ' EPISODES · WATCH IN ORDER', file: 'playlist-season-1.png' }, { label: 'OFFICIAL TRAILER', file: '../season1-trailer/thumbnail.png' }]) { const { c, ctx } = canvas(1280, 720);
     ctx.fillStyle = C.void; ctx.fillRect(0, 0, 1280, 720);
     const t = space(ctx, ep, { k: 2.4, x: 900 - 400 * 2.4, y: 330 - 152 * 2.4, R: 96, cx: 400, blips: true });
     ctx.fillStyle = 'rgba(7,11,16,0.9)'; ctx.fillRect(0, 0, 420, 720);
     for (let i = 0; i < 12; i++) { ctx.fillStyle = 'rgba(7,11,16,' + (0.9 - (i + 1) * 0.072) + ')'; ctx.fillRect(420 + i * 30, 0, 30, 720); }
     ctx.font = '34px ' + FONT_DISPLAY; ctx.fillStyle = C.dim; ctx.fillText(SERIES, 52, 84);
-    ctx.font = 'bold 24px ' + FONT_MONO; ctx.fillStyle = C.paper; ctx.fillText(all.length + ' EPISODES · WATCH IN ORDER', 54, 124);
+    ctx.font = 'bold 24px ' + FONT_MONO; ctx.fillStyle = C.paper; ctx.fillText(cover.label, 54, 124);
     ctx.font = '150px ' + FONT_DISPLAY; ctx.fillStyle = C.amber; ctx.fillText('SEASON', 46, 330); ctx.fillText('ONE', 46, 470);
     ctx.font = 'bold 28px ' + FONT_MONO; ctx.fillStyle = C.teal; ctx.fillText('sixty-four went out. seven follow.', 54, 600);
     traceLine(ctx, ep, 'beacon', t, 0, 1280, 652, 34, C.amber, 0, 60); traceLine(ctx, ep, 'other', t, 0, 1280, 694, 20, C.teal, 2, 60);
     ctx.strokeStyle = C.dim; ctx.lineWidth = 6; ctx.strokeRect(3, 3, 1274, 714);
-    await save(c, 'playlist-season-1.png'); }
+    ensureDir(path.join(ROOT, 'release/season1-trailer')); await save(c, cover.file); }
 
   // Channel text.
   const cal = calendar(all.length), total = all.reduce((s, e) => s + e.duration, 0);
@@ -93,7 +93,7 @@ export async function renderChannel(all) {
     '',
     'PERIHELION is a science-fiction serial told entirely through a ship\'s console. You never see a face. You see the viewscreen, the star map, the signal strip, the deck plan with its seven crew dots, the captain\'s log and the comms. Watch the instruments: they show more than the log says.',
     '',
-    'Season 1 is ' + all.length + ' episodes, about ' + Math.round(total / 60) + ' minutes in all. New episodes ' + when + ', with a short trailer the day before each one.',
+    'Season 1 is ' + all.length + ' episodes, about ' + Math.round(total / 60) + ' minutes in all. New episodes ' + when + ', with a trailer the day before each one.',
     '',
     'Start with episode 1, "' + all[0].meta.title + '", and watch in order.',
     '',
@@ -127,7 +127,7 @@ export async function renderChannel(all) {
     '## Channel keywords', '', '```', se.tags.map(t => (t.includes(' ') ? '"' + t + '"' : t)).join(' '), '```', '',
     '## Playlist', '', '- Title: PERIHELION · Season 1', '- Order: manual, episode 1 first. Turn on "Set as official series playlist" so episodes link to the next one.', '', '```', playlist, '```', '',
     '## Home tab layout', '',
-    '1. Channel trailer for people who have not subscribed: the episode 1 trailer (`s01e01-short.mp4`) will not work here because Shorts cannot be channel trailers. Use episode 1 itself.',
+    '1. Channel trailer for people who have not subscribed: the 16:9 season trailer (`dist/season1/season1-trailer.mp4`).',
     '2. Featured video for returning subscribers: the newest episode.',
     '3. Section 1: the "PERIHELION · Season 1" playlist, as a single horizontal row.',
     '4. Section 2: Shorts (YouTube adds this shelf by itself once trailers are up).', '',

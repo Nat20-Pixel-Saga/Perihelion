@@ -12,7 +12,8 @@
     "days": ["Tue", "Thu", "Sat"],
     "time": "18:00",
     "timezone": "Europe/Paris",
-    "trailerDaysBefore": 1
+    "trailerDaysBefore": 1,
+    "seasonTrailerDaysBefore": 7
   },
   "about": "PERIHELION is a science-fiction serial told entirely through a ship's console: the viewscreen, the star map, the signal strip, the deck plan, the captain's log and the comms. Watch the instruments. They show more than the log says.",
   "hashtags": ["#scifi", "#sciencefiction", "#spaceexploration", "#animatedseries", "#perihelion"],

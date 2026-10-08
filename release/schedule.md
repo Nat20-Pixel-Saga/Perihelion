@@ -3,6 +3,8 @@
 Episodes air Tue, Thu, Sat at 18:00 Europe/Paris. Each trailer goes out 1 day before its episode.
 Change `schedule.firstEpisode` in `season.json` and run `npm run meta` to move every date.
 
+The season trailer (16:9 and 9:16) goes out 7 days before episode 1: 2026-10-13T18:00:00+02:00. Each episode trailer exists in both formats and both publish at the trailer time below.
+
 | # | Title | Runtime | Airs | Trailer publishes | Episode publishes |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Sixty-one seconds | 4:29 | Tuesday 20 October | 2026-10-19T18:00:00+02:00 | 2026-10-20T18:00:00+02:00 |

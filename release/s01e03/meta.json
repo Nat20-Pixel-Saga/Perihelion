@@ -41,9 +41,16 @@
     "description": "release/s01e03/description.txt"
   },
   "trailer": {
-    "title": "Three people left this shuttle. None were taken | Perihelion E3 #shorts",
     "runtimeSeconds": 45.2,
     "publishAt": "2026-10-23T18:00:00+02:00",
-    "video": "dist/s01e03/s01e03-short.mp4"
+    "wide": {
+      "title": "Trailer: Three empty suits | Perihelion S1 E3",
+      "video": "dist/s01e03/s01e03-trailer.mp4",
+      "thumbnail": "release/s01e03/thumbnail.png"
+    },
+    "short": {
+      "title": "Three people left this shuttle. None were taken | Perihelion E3 #shorts",
+      "video": "dist/s01e03/s01e03-short.mp4"
+    }
   }
 }

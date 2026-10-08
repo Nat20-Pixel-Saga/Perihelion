@@ -11,10 +11,12 @@ For each episode, `npm run build` writes:
 | File | What it is |
 | --- | --- |
 | `dist/s01eNN/s01eNN.mp4` | The episode, 1920 × 1080, 30 fps, H.264 with AAC audio |
-| `dist/s01eNN/s01eNN-short.mp4` | A vertical trailer, 1080 × 1920, 35 to 50 seconds, for YouTube Shorts |
+| `dist/s01eNN/s01eNN-trailer.mp4` | The episode's trailer in 16:9, 1920 × 1080, 35 to 50 seconds |
+| `dist/s01eNN/s01eNN-short.mp4` | The same trailer in 9:16, 1080 × 1920, for YouTube Shorts |
 | `release/s01eNN/thumbnail.png` | Thumbnail, 1280 × 720 |
 | `release/s01eNN/title.txt`, `description.txt`, `tags.txt` | Upload text. The description includes chapter timestamps and music credits |
-| `release/s01eNN/short-title.txt`, `short-description.txt` | Upload text for the trailer |
+| `release/s01eNN/trailer-title.txt`, `trailer-description.txt` | Upload text for the 16:9 trailer (it reuses the episode's thumbnail) |
+| `release/s01eNN/short-title.txt`, `short-description.txt` | Upload text for the 9:16 trailer |
 | `release/s01eNN/script.md` | The episode as a readable script |
 | `release/s01eNN/meta.json` | Everything above plus `publishAt` times, for an uploader |
 | `release/schedule.md` | The release calendar |
@@ -33,7 +35,9 @@ node tools/cli.js build --no-video # thumbnails and text only, a few seconds
 npm run preview                    # play any episode in a browser at localhost:4173
 ```
 
-Other commands: `lint`, `render`, `short`, `thumb`, `frames`, `meta`, `music`. `node tools/cli.js render s01e03 --seconds 30` renders only the first 30 seconds.
+The season trailer is separate: `node tools/cli.js season-trailer` writes `dist/season1/season1-trailer.mp4` (16:9) and `season1-short.mp4` (9:16) from the cut list in `episodes/season1-trailer.js`, and its upload text is in `release/season1-trailer/`.
+
+Other commands: `lint`, `render`, `trailer` (add `--wide` or `--short` for one format), `thumb`, `frames`, `meta`, `channel`, `music`. `node tools/cli.js render s01e03 --seconds 30` renders only the first 30 seconds.
 
 The same build runs on GitHub: open the Actions tab, choose "Render episodes", and download the result from the run page.
 

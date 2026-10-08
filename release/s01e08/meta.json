@@ -41,9 +41,16 @@
     "description": "release/s01e08/description.txt"
   },
   "trailer": {
-    "title": "Sixty-three empty cabins. One light still on | Perihelion E8 #shorts",
     "runtimeSeconds": 47.2,
     "publishAt": "2026-11-04T18:00:00+01:00",
-    "video": "dist/s01e08/s01e08-short.mp4"
+    "wide": {
+      "title": "Trailer: Aphelion | Perihelion S1 E8",
+      "video": "dist/s01e08/s01e08-trailer.mp4",
+      "thumbnail": "release/s01e08/thumbnail.png"
+    },
+    "short": {
+      "title": "Sixty-three empty cabins. One light still on | Perihelion E8 #shorts",
+      "video": "dist/s01e08/s01e08-short.mp4"
+    }
   }
 }

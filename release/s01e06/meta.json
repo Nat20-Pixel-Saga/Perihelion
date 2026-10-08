@@ -41,9 +41,16 @@
     "description": "release/s01e06/description.txt"
   },
   "trailer": {
-    "title": "The crew will vote on their captain | Perihelion E6 #shorts",
     "runtimeSeconds": 43.2,
     "publishAt": "2026-10-30T18:00:00+01:00",
-    "video": "dist/s01e06/s01e06-short.mp4"
+    "wide": {
+      "title": "Trailer: The seventh | Perihelion S1 E6",
+      "video": "dist/s01e06/s01e06-trailer.mp4",
+      "thumbnail": "release/s01e06/thumbnail.png"
+    },
+    "short": {
+      "title": "The crew will vote on their captain | Perihelion E6 #shorts",
+      "video": "dist/s01e06/s01e06-short.mp4"
+    }
   }
 }

@@ -41,9 +41,16 @@
     "description": "release/s01e02/description.txt"
   },
   "trailer": {
-    "title": "Someone on this ship answered it | Perihelion E2 #shorts",
     "runtimeSeconds": 43.2,
     "publishAt": "2026-10-21T18:00:00+02:00",
-    "video": "dist/s01e02/s01e02-short.mp4"
+    "wide": {
+      "title": "Trailer: Dead astern | Perihelion S1 E2",
+      "video": "dist/s01e02/s01e02-trailer.mp4",
+      "thumbnail": "release/s01e02/thumbnail.png"
+    },
+    "short": {
+      "title": "Someone on this ship answered it | Perihelion E2 #shorts",
+      "video": "dist/s01e02/s01e02-short.mp4"
+    }
   }
 }

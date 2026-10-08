@@ -406,11 +406,27 @@ export const LAYOUTS = {
   thumb: { W: 1280, H: 720 }
 };
 
-// 16:9 episode frame.
-export function drawWide(ctx, ep, t) {
-  prepare(ep);
+// Full-frame text card for trailers. card: { lines: [{ text, size, tone, mono, bold }], alpha }
+function drawCard(ctx, W, H, card) {
+  const a = card.alpha === undefined ? 1 : card.alpha, wide = W > H, k = wide ? 1.15 : 1, maxW = wide ? 980 : 640;
+  ctx.fillStyle = 'rgba(7,11,16,' + 0.9 * a + ')'; ctx.fillRect(0, 0, W, H);
+  ctx.globalAlpha = a; ctx.textAlign = 'center';
+  const rows = [];
+  for (const ln of card.lines) { const size = (ln.size || 44) * k; wrapChars(ln.text, Math.floor(maxW / (size * (ln.mono ? 0.6 : 0.58)))).forEach((w, i, arr) => rows.push({ ln, size, text: w.text, gap: i === arr.length - 1 ? size * 0.45 : 0 })); }
+  const total = rows.reduce((s, r) => s + r.size * 1.25 + r.gap, 0);
+  let y = (wide ? H / 2 : H * 0.44) - total / 2;
+  for (const r of rows) { y += r.size; ctx.font = r.ln.mono ? F(r.size, r.ln.bold) : FD(r.size); ctx.fillStyle = tone(r.ln.tone || 'amber'); ctx.fillText(r.text, W / 2, y); y += r.size * 0.25 + r.gap; }
+  ctx.textAlign = 'left'; ctx.globalAlpha = 1;
+}
+
+// 16:9 frame. For trailers pass o: { trailer: true, caption, card }.
+export function drawWide(ctx, ep, t, o) {
+  prepare(ep); o = o || {};
   const s = stateAt(ep, t); setTheme(s.theme); applyViewExtras(ep, s, t);
+  if (o.trailer) { s.title = null; s.end = null; s.scene = null; }
   ctx.fillStyle = C.void; ctx.fillRect(0, 0, 1280, 720); ctx.textBaseline = 'alphabetic'; ctx.textAlign = 'left';
+  // Trailers shrink the console a little and put the caption in a band above it.
+  if (o.trailer) { ctx.save(); ctx.translate(50, 56); ctx.scale(0.922, 0.922); }
   place(ctx, { x: 16, y: 0, w: 1248 }, 1248, () => drawTop(ctx, s));
   place(ctx, { x: 16, y: 52, w: 760 }, 760, () => drawView(ctx, ep, s, t));
   place(ctx, { x: 788, y: 52, w: 476 }, 476, () => drawMap(ctx, s, t));
@@ -419,6 +435,13 @@ export function drawWide(ctx, ep, t) {
   place(ctx, { x: 788, y: 364, w: 476 }, 476, () => drawLog(ctx, s, t));
   place(ctx, { x: 16, y: 596, w: 760 }, 760, () => drawComms(ctx, s));
   place(ctx, { x: 788, y: 596, w: 476 }, 476, () => drawMeters(ctx, s, t));
+  if (o.trailer) {
+    ctx.restore();
+    ctx.fillStyle = C.accent; ctx.fillRect(50, 14, 6, 34);
+    ctx.font = F(27, true); ctx.fillStyle = C.paper; ctx.fillText(o.caption || '', 72, 41);
+    ctx.font = FD(24); ctx.fillStyle = C.accentDim; ctx.textAlign = 'right'; ctx.fillText(SERIES + ' · E' + ep.meta.number, 1230, 40); ctx.textAlign = 'left';
+  }
+  if (o.card) drawCard(ctx, 1280, 720, o.card);
   return s;
 }
 
@@ -437,7 +460,7 @@ function applyViewExtras(ep, s, t) {
 export function drawTall(ctx, ep, t, o) {
   prepare(ep); o = o || {};
   const s = stateAt(ep, t); setTheme(s.theme); applyViewExtras(ep, s, t);
-  s.title = null; s.end = null;
+  s.title = null; s.end = null; s.scene = null;
   ctx.fillStyle = C.void; ctx.fillRect(0, 0, 720, 1280); ctx.textBaseline = 'alphabetic'; ctx.textAlign = 'left';
   ctx.font = FD(38); ctx.fillStyle = C.accent; ctx.fillText(SERIES, 16, 52);
   ctx.font = F(16); ctx.fillStyle = C.paper; ctx.textAlign = 'right'; ctx.fillText('episode ' + ep.meta.number, 704, 34);
@@ -451,18 +474,7 @@ export function drawTall(ctx, ep, t, o) {
   place(ctx, { x: 16, y: 533, w: k }, 760, () => drawDecks(ctx, s, t));
   place(ctx, { x: 16, y: 742, w: k }, 476, () => drawSignal(ctx, ep, s, t));
   place(ctx, { x: 16, y: 908, w: k }, 476, () => drawLog(ctx, s, t));
-  if (o.card) {
-    const a = o.card.alpha === undefined ? 1 : o.card.alpha;
-    ctx.fillStyle = 'rgba(7,11,16,' + 0.9 * a + ')'; ctx.fillRect(0, 0, 720, 1280);
-    ctx.globalAlpha = a; ctx.textAlign = 'center';
-    let y = 520 - o.card.lines.length * 34;
-    for (const ln of o.card.lines) {
-      const size = ln.size || 44; ctx.font = ln.mono ? F(size, ln.bold) : FD(size); ctx.fillStyle = tone(ln.tone || 'amber');
-      for (const w of wrapChars(ln.text, Math.floor(640 / (size * (ln.mono ? 0.6 : 0.58))))) { ctx.fillText(w.text, 360, y); y += size * 1.25; }
-      y += size * 0.45;
-    }
-    ctx.textAlign = 'left'; ctx.globalAlpha = 1;
-  }
+  if (o.card) drawCard(ctx, 720, 1280, o.card);
   return s;
 }
 

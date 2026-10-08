@@ -41,9 +41,16 @@
     "description": "release/s01e10/description.txt"
   },
   "trailer": {
-    "title": "To stop it, she must out-argue herself | Perihelion E10 #shorts",
     "runtimeSeconds": 43.7,
     "publishAt": "2026-11-09T18:00:00+01:00",
-    "video": "dist/s01e10/s01e10-short.mp4"
+    "wide": {
+      "title": "Trailer: All aboard and well | Perihelion S1 E10",
+      "video": "dist/s01e10/s01e10-trailer.mp4",
+      "thumbnail": "release/s01e10/thumbnail.png"
+    },
+    "short": {
+      "title": "To stop it, she must out-argue herself | Perihelion E10 #shorts",
+      "video": "dist/s01e10/s01e10-short.mp4"
+    }
   }
 }

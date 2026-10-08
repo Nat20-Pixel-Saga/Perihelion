@@ -41,9 +41,16 @@
     "description": "release/s01e05/description.txt"
   },
   "trailer": {
-    "title": "Seven people aboard. The signal counts eight | Perihelion E5 #shorts",
     "runtimeSeconds": 42.2,
     "publishAt": "2026-10-28T18:00:00+01:00",
-    "video": "dist/s01e05/s01e05-short.mp4"
+    "wide": {
+      "title": "Trailer: Eight | Perihelion S1 E5",
+      "video": "dist/s01e05/s01e05-trailer.mp4",
+      "thumbnail": "release/s01e05/thumbnail.png"
+    },
+    "short": {
+      "title": "Seven people aboard. The signal counts eight | Perihelion E5 #shorts",
+      "video": "dist/s01e05/s01e05-short.mp4"
+    }
   }
 }

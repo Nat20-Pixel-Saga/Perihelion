@@ -25,14 +25,14 @@ Sixty-four people went out on the survey ship Aphelion. Eleven years ago they st
 
 PERIHELION is a science-fiction serial told entirely through a ship's console. You never see a face. You see the viewscreen, the star map, the signal strip, the deck plan with its seven crew dots, the captain's log and the comms. Watch the instruments: they show more than the log says.
 
-Season 1 is 10 episodes, about 72 minutes in all. New episodes Tuesday, Thursday and Saturday at 18:00 (Paris time), with a short trailer the day before each one.
+Season 1 is 10 episodes, about 72 minutes in all. New episodes Tuesday, Thursday and Saturday at 18:00 (Paris time), with a trailer the day before each one.
 
 Start with episode 1, "Sixty-one seconds", and watch in order.
 
 Every frame and every sound is drawn by code from a script. The scripts and the tools are public: https://github.com/Nat20-Pixel-Saga/Perihelion
 ```
 
-(791 of 1,000 characters)
+(785 of 1,000 characters)
 
 ## One-line versions
 
@@ -72,7 +72,7 @@ Told entirely through a ship's console. Watch the instruments.
 
 ## Home tab layout
 
-1. Channel trailer for people who have not subscribed: the episode 1 trailer (`s01e01-short.mp4`) will not work here because Shorts cannot be channel trailers. Use episode 1 itself.
+1. Channel trailer for people who have not subscribed: the 16:9 season trailer (`dist/season1/season1-trailer.mp4`).
 2. Featured video for returning subscribers: the newest episode.
 3. Section 1: the "PERIHELION · Season 1" playlist, as a single horizontal row.
 4. Section 2: Shorts (YouTube adds this shelf by itself once trailers are up).

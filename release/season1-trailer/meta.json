@@ -1,0 +1,27 @@
+{
+  "id": "season1-trailer",
+  "publishAt": "2026-10-13T18:00:00+02:00",
+  "tags": [
+    "science fiction",
+    "sci-fi series",
+    "space exploration",
+    "animated series",
+    "retro console",
+    "captain's log",
+    "first contact",
+    "mystery",
+    "serial fiction",
+    "Perihelion"
+  ],
+  "wide": {
+    "title": "PERIHELION | Season 1 trailer",
+    "runtimeSeconds": 77.8,
+    "video": "dist/season1/season1-trailer.mp4",
+    "thumbnail": "release/season1-trailer/thumbnail.png"
+  },
+  "short": {
+    "title": "Sixty-four people went out. None came back | Perihelion season 1 #shorts",
+    "runtimeSeconds": 54.3,
+    "video": "dist/season1/season1-short.mp4"
+  }
+}

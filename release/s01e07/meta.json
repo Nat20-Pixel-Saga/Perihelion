@@ -41,9 +41,16 @@
     "description": "release/s01e07/description.txt"
   },
   "trailer": {
-    "title": "It writes to them now, in voices they miss | Perihelion E7 #shorts",
     "runtimeSeconds": 42.7,
     "publishAt": "2026-11-02T18:00:00+01:00",
-    "video": "dist/s01e07/s01e07-short.mp4"
+    "wide": {
+      "title": "Trailer: What we deleted | Perihelion S1 E7",
+      "video": "dist/s01e07/s01e07-trailer.mp4",
+      "thumbnail": "release/s01e07/thumbnail.png"
+    },
+    "short": {
+      "title": "It writes to them now, in voices they miss | Perihelion E7 #shorts",
+      "video": "dist/s01e07/s01e07-short.mp4"
+    }
   }
 }

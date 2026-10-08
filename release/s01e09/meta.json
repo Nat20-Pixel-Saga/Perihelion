@@ -41,9 +41,16 @@
     "description": "release/s01e09/description.txt"
   },
   "trailer": {
-    "title": "Sixty-three voices. One of them is her brother | Perihelion E9 #shorts",
     "runtimeSeconds": 46.7,
     "publishAt": "2026-11-06T18:00:00+01:00",
-    "video": "dist/s01e09/s01e09-short.mp4"
+    "wide": {
+      "title": "Trailer: The Register | Perihelion S1 E9",
+      "video": "dist/s01e09/s01e09-trailer.mp4",
+      "thumbnail": "release/s01e09/thumbnail.png"
+    },
+    "short": {
+      "title": "Sixty-three voices. One of them is her brother | Perihelion E9 #shorts",
+      "video": "dist/s01e09/s01e09-short.mp4"
+    }
   }
 }
