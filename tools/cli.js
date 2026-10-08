@@ -5,6 +5,7 @@
 //   thumb    thumbnail only              frames   still frames for review (ids, then optional seconds)
 //   meta     titles, descriptions, script, schedule
 //   lint     check episodes              music    status | fetch
+//   channel  channel art and channel text into release/channel
 // Options: --seconds N (render only the first N seconds), --no-video (build without the two videos)
 
 import { loadEpisode, episodeIds, clock } from './lib.js';
@@ -13,6 +14,7 @@ import { renderThumb, renderFrames } from './stills.js';
 import { writeMeta, writeSchedule } from './meta.js';
 import { lint } from './lint.js';
 import { musicStatus, musicFetch } from './music.js';
+import { renderChannel } from './channel.js';
 
 const argv = process.argv.slice(2), cmd = argv[0] || 'build';
 const flags = {}, rest = [];
@@ -32,7 +34,8 @@ function runLint(eps) {
   return bad;
 }
 
-if (cmd === 'music') { if (extra[0] === 'fetch') await musicFetch(); else musicStatus(); }
+if (cmd === 'channel') { await renderChannel(await everything()); }
+else if (cmd === 'music') { if (extra[0] === 'fetch') await musicFetch(); else musicStatus(); }
 else if (cmd === 'lint') { if (runLint(await pick())) process.exit(1); }
 else {
   const eps = await pick(), all = await everything();

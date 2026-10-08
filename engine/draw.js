@@ -205,7 +205,7 @@ function drawScreen(ctx, ep, s, t) {
   }
 }
 // The viewscreen's picture only: stars, body, blips. Used by the panel and by the thumbnail.
-function drawSpace(ctx, ep, s, t, labels) {
+export function drawSpace(ctx, ep, s, t, labels) {
   const transit = s.mode === 'transit';
   ctx.strokeStyle = C.paper; ctx.fillStyle = C.paper;
   for (const st of STARS) {
@@ -304,7 +304,7 @@ function drawMap(ctx, s, t) {
 }
 
 /* ---------- signal strip (476 x 108) ---------- */
-function traceLine(ctx, ep, ch, t, x0, x1, base, amp, col, k, speed) {
+export function traceLine(ctx, ep, ch, t, x0, x1, base, amp, col, k, speed) {
   ctx.strokeStyle = col; ctx.lineWidth = 1.5; ctx.beginPath();
   for (let x = x0; x <= x1; x += 2) {
     const tau = t - (x1 - x) / speed, age = pulseAge(ep, ch, tau);

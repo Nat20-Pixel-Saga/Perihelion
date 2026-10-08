@@ -1,7 +1,10 @@
 {
   "series": "Perihelion",
   "season": 1,
-  "channel": "Nat20 Pixel Saga",
+  "channel": "Perihelion Saga",
+  "handle": "@PerihelionSaga",
+  "channelUrl": "https://www.youtube.com/@PerihelionSaga",
+  "tagline": "A serial told through a ship's console",
   "repo": "https://github.com/Nat20-Pixel-Saga/Perihelion",
   "playlistUrl": "",
   "schedule": {
